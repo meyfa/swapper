@@ -2,6 +2,8 @@ package de.jangobrick.swapper;
 
 import java.awt.Component;
 
+import de.jangobrick.swapper.events.Event;
+
 
 /**
  * Base class for every Swapper component wrapper.
@@ -58,6 +60,20 @@ public abstract class Swap<C extends Component>
     public Swap<C> revalidate()
     {
         getComponent().revalidate();
+        return this;
+    }
+
+    /**
+     * Registers an event listener for the given {@link Event}.
+     * 
+     * @param event The event type.
+     * @param listener The listener to add.
+     * 
+     * @return This instance.
+     */
+    public <L> Swap<C> on(Event<? super C, L> event, L listener)
+    {
+        event.register(getComponent(), listener);
         return this;
     }
 }
