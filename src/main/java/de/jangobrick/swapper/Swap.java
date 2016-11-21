@@ -19,6 +19,7 @@ import de.jangobrick.swapper.events.Event;
 public abstract class Swap<C extends Component>
 {
     private C component;
+    private ComponentSize size;
 
     /**
      * Constructs this Swap's component.
@@ -61,6 +62,18 @@ public abstract class Swap<C extends Component>
     {
         getComponent().revalidate();
         return this;
+    }
+
+    /**
+     * @return This swap's {@link ComponentSize}; an object used for controlling
+     *         the preferred, the minimum and the maximum dimensions.
+     */
+    public ComponentSize size()
+    {
+        if (size == null) {
+            size = new ComponentSize(getComponent());
+        }
+        return size;
     }
 
     /**
