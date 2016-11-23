@@ -20,6 +20,7 @@ public abstract class Swap<C extends Component>
 {
     private C component;
     private ComponentSize size;
+    private ComponentStyle style;
 
     /**
      * Constructs this Swap's component.
@@ -74,6 +75,18 @@ public abstract class Swap<C extends Component>
             size = new ComponentSize(getComponent());
         }
         return size;
+    }
+
+    /**
+     * @return This swap's {@link ComponentStyle}; an object used for
+     *         controlling the component's appearance.
+     */
+    public ComponentStyle style()
+    {
+        if (style == null) {
+            style = new ComponentStyle(getComponent());
+        }
+        return style;
     }
 
     /**
