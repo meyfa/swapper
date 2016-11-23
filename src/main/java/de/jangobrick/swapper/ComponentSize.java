@@ -9,7 +9,7 @@ import java.awt.Dimension;
  * component's three size properties: preferred, minimum, maximum.
  * 
  * All of them can be set either with separate (width, height) components or
- * with a {@link Dimension} object
+ * with a {@link Dimension} object.
  */
 public class ComponentSize
 {
