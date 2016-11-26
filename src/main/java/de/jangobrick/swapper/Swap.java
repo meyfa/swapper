@@ -8,10 +8,12 @@ import de.jangobrick.swapper.events.Event;
 /**
  * Base class for every Swapper component wrapper.
  * 
+ * <p>
  * The component is obtained "on demand" by calling the subclass's
  * {@link #build()} method. After that method has been called, the return value
  * is stored, and it will not be called again.
  * 
+ * <p>
  * The instance may be accessed with {@link #getComponent()}.
  * 
  * @param <C> The wrapped component type.

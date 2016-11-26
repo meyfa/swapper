@@ -8,6 +8,7 @@ import java.awt.Dimension;
  * This class controls a Swap's dimensions by providing setters for the
  * component's three size properties: preferred, minimum, maximum.
  * 
+ * <p>
  * All of them can be set either with separate (width, height) components or
  * with a {@link Dimension} object.
  */
