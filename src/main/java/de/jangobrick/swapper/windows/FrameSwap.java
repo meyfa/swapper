@@ -1,0 +1,93 @@
+package de.jangobrick.swapper.windows;
+
+import java.awt.GraphicsConfiguration;
+
+import javax.swing.JFrame;
+
+import de.jangobrick.swapper.ContainerSwap;
+
+
+/**
+ * Swap class for {@link JFrame}, allowing control over the frame's contents and
+ * display parameters.
+ */
+public class FrameSwap extends ContainerSwap<JFrame>
+{
+    private GraphicsConfiguration gc;
+
+    /**
+     * Constructs a new, empty, invisible {@code FrameSwap} using the default
+     * graphics configuration.
+     */
+    public FrameSwap()
+    {
+        // empty constructor
+    }
+
+    /**
+     * Constructs a new, empty, invisible {@code FrameSwap} using a specific
+     * graphics configuration.
+     * 
+     * @param gc The graphics configuration to use.
+     */
+    public FrameSwap(GraphicsConfiguration gc)
+    {
+        this.gc = gc;
+    }
+
+    @Override
+    protected JFrame build()
+    {
+        return gc != null ? new JFrame(gc) : new JFrame();
+    }
+
+    /**
+     * Sets the frame's title.
+     * 
+     * @param title The new title.
+     * 
+     * @return This instance.
+     */
+    public FrameSwap title(String title)
+    {
+        getComponent().setTitle(title);
+        return this;
+    }
+
+    /**
+     * Shows ({@code true}) or hides ({@code false}) the frame.
+     * 
+     * @param visible Whether the frame shall be visible.
+     * 
+     * @return This instance.
+     */
+    public FrameSwap setVisible(boolean visible)
+    {
+        getComponent().setVisible(visible);
+        return this;
+    }
+
+    /**
+     * Prepares the frame for being displayed.
+     * 
+     * @return This instance.
+     */
+    public FrameSwap pack()
+    {
+        getComponent().pack();
+        return this;
+    }
+
+    /**
+     * Packs the frame, then sets it visible.
+     * 
+     * <p>
+     * In other words, this is a shortcut for {@code pack().setVisible(true)}.
+     * 
+     * @return This instance.
+     */
+    public FrameSwap show()
+    {
+        return pack().setVisible(true);
+    }
+}
