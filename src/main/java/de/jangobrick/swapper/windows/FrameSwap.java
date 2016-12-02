@@ -14,6 +14,7 @@ import de.jangobrick.swapper.ContainerSwap;
 public class FrameSwap extends ContainerSwap<JFrame>
 {
     private GraphicsConfiguration gc;
+    private WindowLocation location;
 
     /**
      * Constructs a new, empty, invisible {@code FrameSwap} using the default
@@ -39,6 +40,18 @@ public class FrameSwap extends ContainerSwap<JFrame>
     protected JFrame build()
     {
         return gc != null ? new JFrame(gc) : new JFrame();
+    }
+
+    /**
+     * @return This swap's {@link WindowLocation} used for defining the frame's
+     *         placement on screen.
+     */
+    public WindowLocation location()
+    {
+        if (location == null) {
+            location = new WindowLocation(getComponent());
+        }
+        return location;
     }
 
     /**
