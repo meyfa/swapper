@@ -68,6 +68,22 @@ public class FrameSwap extends ContainerSwap<JFrame>
     }
 
     /**
+     * Sets the default operation that happens when the user initiates a "close"
+     * on this frame.
+     * 
+     * The initial value is {@code CloseOperation.HIDE}.
+     * 
+     * @param op The default close operation.
+     * 
+     * @return This instance.
+     */
+    public FrameSwap closeOperation(CloseOperation op)
+    {
+        getComponent().setDefaultCloseOperation(op.getValue());
+        return this;
+    }
+
+    /**
      * Shows ({@code true}) or hides ({@code false}) the frame.
      * 
      * @param visible Whether the frame shall be visible.
