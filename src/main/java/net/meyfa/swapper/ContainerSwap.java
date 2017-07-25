@@ -1,4 +1,4 @@
-package de.jangobrick.swapper;
+package net.meyfa.swapper;
 
 import java.awt.Container;
 import java.awt.LayoutManager;

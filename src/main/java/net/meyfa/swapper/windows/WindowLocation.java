@@ -1,10 +1,10 @@
-package de.jangobrick.swapper.windows;
+package net.meyfa.swapper.windows;
 
 import java.awt.Component;
 import java.awt.Point;
 import java.awt.Window;
 
-import de.jangobrick.swapper.Swap;
+import net.meyfa.swapper.Swap;
 
 
 /**

@@ -1,4 +1,4 @@
-package de.jangobrick.swapper;
+package net.meyfa.swapper;
 
 import java.awt.Color;
 import java.awt.Component;

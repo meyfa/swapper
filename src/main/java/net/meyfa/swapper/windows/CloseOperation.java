@@ -1,4 +1,4 @@
-package de.jangobrick.swapper.windows;
+package net.meyfa.swapper.windows;
 
 import javax.swing.WindowConstants;
 

@@ -1,21 +1,21 @@
-package de.jangobrick.swapper;
+package net.meyfa.swapper;
 
 import java.awt.Component;
 
-import de.jangobrick.swapper.events.Event;
+import net.meyfa.swapper.events.Event;
 
 
 /**
  * Base class for every Swapper component wrapper.
- * 
+ *
  * <p>
  * The component is obtained "on demand" by calling the subclass's
  * {@link #build()} method. After that method has been called, the return value
  * is stored, and it will not be called again.
- * 
+ *
  * <p>
  * The instance may be accessed with {@link #getComponent()}.
- * 
+ *
  * @param <C> The wrapped component type.
  */
 public abstract class Swap<C extends Component>
@@ -26,7 +26,7 @@ public abstract class Swap<C extends Component>
 
     /**
      * Constructs this Swap's component.
-     * 
+     *
      * @return A new component instance.
      */
     protected abstract C build();
@@ -34,7 +34,7 @@ public abstract class Swap<C extends Component>
     /**
      * Obtains the component wrapped by this instance, constructing it first if
      * necessary.
-     * 
+     *
      * @return The wrapped component.
      */
     public C getComponent()
@@ -47,7 +47,7 @@ public abstract class Swap<C extends Component>
 
     /**
      * Repaints the component.
-     * 
+     *
      * @return This instance.
      */
     public Swap<C> repaint()
@@ -58,7 +58,7 @@ public abstract class Swap<C extends Component>
 
     /**
      * Revalidates the component.
-     * 
+     *
      * @return This instance.
      */
     public Swap<C> revalidate()
@@ -93,10 +93,10 @@ public abstract class Swap<C extends Component>
 
     /**
      * Registers an event listener for the given {@link Event}.
-     * 
+     *
      * @param event The event type.
      * @param listener The listener to add.
-     * 
+     *
      * @return This instance.
      */
     public <L> Swap<C> on(Event<? super C, L> event, L listener)

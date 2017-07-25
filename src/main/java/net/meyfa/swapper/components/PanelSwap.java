@@ -1,8 +1,8 @@
-package de.jangobrick.swapper.components;
+package net.meyfa.swapper.components;
 
 import javax.swing.JPanel;
 
-import de.jangobrick.swapper.ContainerSwap;
+import net.meyfa.swapper.ContainerSwap;
 
 
 /**

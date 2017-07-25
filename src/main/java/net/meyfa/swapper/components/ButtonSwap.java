@@ -1,9 +1,9 @@
-package de.jangobrick.swapper.components;
+package net.meyfa.swapper.components;
 
 import javax.swing.Icon;
 import javax.swing.JButton;
 
-import de.jangobrick.swapper.Swap;
+import net.meyfa.swapper.Swap;
 
 
 /**

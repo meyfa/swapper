@@ -1,4 +1,4 @@
-package de.jangobrick.swapper.events;
+package net.meyfa.swapper.events;
 
 import java.awt.Component;
 import java.awt.event.ComponentListener;

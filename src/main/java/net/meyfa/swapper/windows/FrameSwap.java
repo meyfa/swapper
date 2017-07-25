@@ -1,10 +1,10 @@
-package de.jangobrick.swapper.windows;
+package net.meyfa.swapper.windows;
 
 import java.awt.GraphicsConfiguration;
 
 import javax.swing.JFrame;
 
-import de.jangobrick.swapper.ContainerSwap;
+import net.meyfa.swapper.ContainerSwap;
 
 
 /**
